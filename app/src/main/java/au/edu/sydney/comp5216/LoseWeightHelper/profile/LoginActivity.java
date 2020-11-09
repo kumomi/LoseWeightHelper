@@ -31,6 +31,9 @@ import java.util.HashMap;
  */
 public class LoginActivity extends AppCompatActivity {
 
+    /**
+     * Initialize the firebase permission
+     */
     EditText emailInput, passwordInput;
     Button loginBtn;
     TextView forgetBtn;

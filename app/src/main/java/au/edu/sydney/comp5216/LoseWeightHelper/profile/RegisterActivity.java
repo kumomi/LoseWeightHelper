@@ -42,6 +42,11 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser user = mAuth.getCurrentUser();
 
+    /**
+     * to verify whether the current email address is valid
+     * @param target valid email address
+     * @return true or false
+     */
     public static boolean isValidEmail(CharSequence target) {
         return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
@@ -81,6 +86,9 @@ public class RegisterActivity extends AppCompatActivity {
 
                 }
 
+                /**
+                 * to indentify whether the password length is valid or not
+                 */
                 else if(password.length()<8){
                     passwordInput.setError("Password length at least 8 characters");
                     Toast.makeText(RegisterActivity.this, "your password should at least 8 characters", Toast.LENGTH_LONG).show();
