@@ -8,21 +8,21 @@
 
     </style>
 
-    <style name="successToast">
-        <item name="colorBackground">@color/colorTheme</item>
-        <item name="textColor">@color/whiteBack</item>
-        <item name="iconLeft">@drawable/ic_toastexample_icon</item>
-        <item name="length">LONG</item>
-        <item name="cornerRadius">10dp</item>
-    </style>
+<!--    <style name="successToast">-->
+<!--        <item name="colorBackground">@color/colorTheme</item>-->
+<!--        <item name="textColor">@color/whiteBack</item>-->
+<!--        <item name="iconLeft">@drawable/ic_toastexample_icon</item>-->
+<!--        <item name="length">LONG</item>-->
+<!--        <item name="cornerRadius">10dp</item>-->
+<!--    </style>-->
 
-    <style name="errorToast">
-        <item name="colorBackground">#E1270E</item>
-        <item name="textColor">@color/whiteBack</item>
-        <item name="iconLeft">@drawable/ic_toasterror_icon</item>
-        <item name="length">LONG</item>
-        <item name="cornerRadius">3dp</item>
-    </style>
+<!--    <style name="errorToast">-->
+<!--        <item name="colorBackground">#E1270E</item>-->
+<!--        <item name="textColor">@color/whiteBack</item>-->
+<!--        <item name="iconLeft">@drawable/ic_toasterror_icon</item>-->
+<!--        <item name="length">LONG</item>-->
+<!--        <item name="cornerRadius">3dp</item>-->
+<!--    </style>-->
 
     <style name="AppTheme.FullScreen">
         <item name="windowActionBar">false</item>

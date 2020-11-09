@@ -4,12 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.comp5216.LoseWeightHelper.R;
 import com.github.mikephil.charting.charts.BarChart;
@@ -26,7 +26,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.muddzdev.styleabletoastlibrary.StyleableToast;
 
 import org.json.JSONObject;
 
@@ -117,7 +116,7 @@ public class UserActivity extends AppCompatActivity {
                         Log.d("gender", genderValue);
                         Log.d("waist", waistValue);
 
-                        StyleableToast.makeText(UserActivity.this, "user data updated", R.style.successToast).show();
+                        Toast.makeText(UserActivity.this, "user data updated",Toast.LENGTH_SHORT).show();
 
                         gender.setText(genderValue);
                         age.setText(ageValue);

@@ -244,8 +244,6 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onStart(){
-        //checkUserStatus();
         super.onStart();
     }
-
 }

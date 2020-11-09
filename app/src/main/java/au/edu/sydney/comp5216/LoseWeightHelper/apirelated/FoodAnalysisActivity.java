@@ -2,7 +2,6 @@ package au.edu.sydney.comp5216.LoseWeightHelper.apirelated;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -11,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.comp5216.LoseWeightHelper.R;
 import com.github.mikephil.charting.charts.BarChart;
@@ -22,7 +22,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.muddzdev.styleabletoastlibrary.StyleableToast;
 import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
@@ -103,11 +102,11 @@ public class FoodAnalysisActivity extends AppCompatActivity {
                 public void onClick(View v) {
 
                     if (TextUtils.isEmpty(foodInput.getText().toString())){
-                        StyleableToast.makeText(FoodAnalysisActivity.this,
-                                "Please input a food", R.style.errorToast).show();
+                        Toast.makeText(FoodAnalysisActivity.this,
+                                "Please input a food", Toast.LENGTH_SHORT).show();
                     } else {
-                        StyleableToast.makeText(FoodAnalysisActivity.this,
-                                "search processing...", R.style.successToast).show();
+                        Toast.makeText(FoodAnalysisActivity.this,
+                                "search processing...", Toast.LENGTH_SHORT).show();
 
                         OkHttpClient client = new OkHttpClient();
                         String callUrl = "https://rapidapi.p.rapidapi.com/parser?ingr="+foodInput.getText().toString();

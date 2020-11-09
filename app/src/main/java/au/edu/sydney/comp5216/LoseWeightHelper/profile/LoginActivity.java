@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.comp5216.LoseWeightHelper.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -86,23 +87,19 @@ public class LoginActivity extends AppCompatActivity {
                                 finish();
                             }else {
                                 progressDialog.dismiss();
-                                StyleableToast.makeText(LoginActivity.this, "please verify your email", R.style.errorToast).show();
 
-                                //Toast.makeText(LoginActivity.this, "Please verify your email", Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, "Please verify your email", Toast.LENGTH_LONG).show();
                             }
 
                         }else {
-                            StyleableToast.makeText(LoginActivity.this, task.getException().getMessage(), R.style.errorToast).show();
-
-                            //Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        StyleableToast.makeText(LoginActivity.this, e.getMessage(), R.style.errorToast).show();
+                        Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
 
-                        //Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -126,21 +123,18 @@ public class LoginActivity extends AppCompatActivity {
                 String email = emailInput.getText().toString().trim();
 
                 if(email.isEmpty()){
-                    StyleableToast.makeText(LoginActivity.this, "please fill your email", R.style.errorToast).show();
+                    Toast.makeText(LoginActivity.this, "please fill your email",Toast.LENGTH_SHORT).show();
 
-                    //Toast.makeText(LoginActivity.this, "please fill your email",Toast.LENGTH_SHORT).show();
                 } else {
                     firebaseAuth.sendPasswordResetEmail(emailInput.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                StyleableToast.makeText(LoginActivity.this, "Password send to your email: "+ emailInput.getText().toString(), R.style.successToast).show();
+                                Toast.makeText(LoginActivity.this, "Password send to your email" + emailInput.getText().toString(), Toast.LENGTH_SHORT).show();
 
-                                 //Toast.makeText(LoginActivity.this, "Password send to your email" + emailInput.getText().toString(), Toast.LENGTH_SHORT).show();
                             } else {
-                                StyleableToast.makeText(LoginActivity.this, task.getException().getMessage(), R.style.errorToast).show();
 
-                                //Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                             }
                         }
                     });

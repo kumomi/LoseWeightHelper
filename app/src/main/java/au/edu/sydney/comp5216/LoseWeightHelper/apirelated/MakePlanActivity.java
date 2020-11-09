@@ -22,7 +22,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.muddzdev.styleabletoastlibrary.StyleableToast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -167,7 +166,8 @@ public class MakePlanActivity extends AppCompatActivity {
                                                         String weightLevel =  lossSelector.getSelectedItem().toString();
 
                                                         if(exercise.equals("exerciseSelector") || weightLevel.equals("lossSelector")){
-//                                                            Toast.makeText(MakePlanActivity.this, "please select from spinner").show();
+
+                                                            Toast.makeText(MakePlanActivity.this, "please select from spinner",Toast.LENGTH_SHORT).show();
 
                                                         } else {
                                                             try {

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.comp5216.LoseWeightHelper.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,7 +28,8 @@ import com.muddzdev.styleabletoastlibrary.StyleableToast;
 import java.util.HashMap;
 
 /**
- * Signup new users, interact with firebase
+ * Signup page for registering new users, interact with firebase required
+ * @version 1.0
  */
 public class RegisterActivity extends AppCompatActivity {
 
@@ -73,7 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     emailInput.setError("Invalid email, please input correct format");
-                    StyleableToast.makeText(RegisterActivity.this, "please input a correct format email", R.style.errorToast).show();
+                    Toast.makeText(RegisterActivity.this, "please input a correct format email", Toast.LENGTH_LONG).show();
 
                     emailInput.setFocusable(true);
 
@@ -81,13 +83,13 @@ public class RegisterActivity extends AppCompatActivity {
 
                 else if(password.length()<8){
                     passwordInput.setError("Password length at least 8 characters");
-                    StyleableToast.makeText(RegisterActivity.this, "your password should at least 8 characters", R.style.errorToast).show();
+                    Toast.makeText(RegisterActivity.this, "your password should at least 8 characters", Toast.LENGTH_LONG).show();
 
                     passwordInput.setFocusable(true);
                 }
                 else if(password.isEmpty()){
                     passwordInput.setError("Please set a password");
-                    StyleableToast.makeText(RegisterActivity.this, "Please set a password", R.style.errorToast).show();
+                    Toast.makeText(RegisterActivity.this, "Please set a password", Toast.LENGTH_LONG).show();
 
                     passwordInput.setFocusable(true);
                 }
@@ -121,8 +123,8 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        StyleableToast.makeText(RegisterActivity.this, "Registering...\n"+ "Please check your email " +user.getEmail(), R.style.successToast).show();
-                                      //  Toast.makeText(RegisterActivity.this, "Registering...\n"+ "Please check your email " +user.getEmail(), Toast.LENGTH_SHORT).show();
+
+                                        Toast.makeText(RegisterActivity.this, "Registering...\n"+ "Please check your email " +user.getEmail(), Toast.LENGTH_SHORT).show();
 
                                         String email = user.getEmail();
                                         String uid = user.getUid();
@@ -146,18 +148,14 @@ public class RegisterActivity extends AppCompatActivity {
                                         finish();
                                     } else {
                                         progressDialog.dismiss();
-                                        StyleableToast.makeText(RegisterActivity.this, task.getException().getMessage(), R.style.errorToast).show();
+                                        Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
-//                            Snackbar.make(v, "Registering...\n"+user.getEmail(), Snackbar.LENGTH_LONG).show();
-
                         } else {
-                            StyleableToast.makeText(RegisterActivity.this, "Authentication failed:  " +user.getEmail(), R.style.errorToast).show();
-
                             // If sign in fails, display a message to the user.
-//                            Toast.makeText(RegisterActivity.this, "Authentication failed.",
-//                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -166,18 +164,10 @@ public class RegisterActivity extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 //error, dismiss progress dialog and get and show the error messages
                 progressDialog.dismiss();
-                StyleableToast.makeText(RegisterActivity.this, e.getMessage(), R.style.errorToast).show();
+                Toast.makeText(RegisterActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-
     }
-
-//    public void onStart() {
-//        FirebaseApp.initializeApp(this);
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//    }
 
     @Override
     public boolean onSupportNavigateUp() {

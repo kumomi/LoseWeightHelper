@@ -10,13 +10,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.comp5216.LoseWeightHelper.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.muddzdev.styleabletoastlibrary.StyleableToast;
 
 import java.util.HashMap;
 
@@ -100,7 +100,7 @@ public class FillDataActivity extends AppCompatActivity {
                     reference.child(uid).setValue(hashMap);
                     startActivity(new Intent(FillDataActivity.this, UserActivity.class));
 
-                    StyleableToast.makeText(FillDataActivity.this, "upload successfull", R.style.successToast).show();
+                    Toast.makeText(FillDataActivity.this, "upload success", Toast.LENGTH_SHORT).show();
 
                     finish();
                 }
@@ -110,7 +110,7 @@ public class FillDataActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     startActivity(new Intent(FillDataActivity.this, UserActivity.class));
-                    StyleableToast.makeText(FillDataActivity.this, "jump successfull", R.style.successToast).show();
+                    Toast.makeText(FillDataActivity.this, "skip success", Toast.LENGTH_SHORT).show();
 
                     finish();
 
