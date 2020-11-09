@@ -80,6 +80,7 @@ public class ProfileActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton indexFab = findViewById(R.id.index_btn);
+        indexFab.setEnabled(false);
         indexFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

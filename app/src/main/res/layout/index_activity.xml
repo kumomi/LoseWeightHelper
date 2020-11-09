@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/user_bar" />
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -98,9 +97,7 @@
                         android:layout_marginLeft="10dp"
                         android:text="End Date:"
                         android:textStyle="bold"
-                        android:textSize="16dp"
-
-                        />
+                        android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/end_date_text"
@@ -120,7 +117,7 @@
                 android:layout_below="@+id/info_box"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="15dp"
                 android:textColor="@color/colorSecond"
                 android:layout_centerHorizontal="true"/>
             <TextView
@@ -143,7 +140,7 @@
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:textColor="@color/colorSecond"
-                android:layout_marginBottom="7dp"
+                android:layout_marginBottom="6dp"
                 android:layout_centerHorizontal="true"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -173,6 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="Meal1"/>
                 </LinearLayout>
 
@@ -196,6 +194,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="Meal2" />
                 </LinearLayout>
                 <LinearLayout
@@ -216,6 +215,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
                         android:text="Meal3" />
                 </LinearLayout>
             </LinearLayout>

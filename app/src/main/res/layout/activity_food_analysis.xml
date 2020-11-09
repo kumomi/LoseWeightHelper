@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="Nutrition Distribution"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/Nutritionresult"
         android:layout_width="match_parent"
