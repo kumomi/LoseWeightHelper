@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false"
+    android:background="@color/whiteBack"
+    tools:context="au.edu.sydney.comp5216.LoseWeightHelper.profile.FillDataActivity">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please fill in your information"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorSecond"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/userAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="age"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/genderSelector"
+        android:layout_gravity="center"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/userWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Weight"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/userHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Height"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/userWaist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Waist"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/userPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    
+
+
+    <Button
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitData"
+        android:text="submit"
+        android:textSize="22dp"
+        android:textColor="@color/whiteBack"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_primary" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/jump"
+        android:text="skip"
+        android:textSize="22dp"
+        android:textColor="@color/colorSecond"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button_second" />
+
+</LinearLayout>
+</ScrollView>

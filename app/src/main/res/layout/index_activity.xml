@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whiteBack"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/signOutToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_bar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/info_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/info_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/renwu" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/plan_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Today's Plan:"
+                        android:textStyle="bold"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/plan_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="aaaaaaaaabbbbbbbbbbccccccccddddddddddeeeeeeeee"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/date_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Date:"
+                        android:textStyle="bold"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="2-2-2020"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/end_date_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="End Date:"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/end_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="6-6-2020"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/exercise_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Exercise Plan"
+                android:layout_below="@+id/info_box"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/colorSecond"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/exercise_text"
+                android:layout_below="@id/exercise_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/gray_border"
+                android:text="aaaaaaaaabbbbbbbbbbccccccccddddddddddeeeeeeeeefffffffffffggggggggggghhhhhhhhhhhhhhhhhhiiiiiiiiiii"/>
+            <TextView
+                android:id="@+id/meal_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Daily Meal Plan"
+                android:layout_below="@+id/exercise_text"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/colorSecond"
+                android:layout_marginBottom="7dp"
+                android:layout_centerHorizontal="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/gray_border"
+                android:layout_below="@+id/meal_title"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:id="@+id/meal_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp">
+                    <ImageView
+                        android:id="@+id/meal_image"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/ic_food"/>
+                    <TextView
+                        android:id="@+id/meal_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:text="Meal1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/meal_box2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/meal_image2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/ic_food"/>
+
+                    <TextView
+                        android:id="@+id/meal_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:text="Meal2" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/meal_box3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:id="@+id/meal_image3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/ic_food"/>
+                    <TextView
+                        android:id="@+id/meal_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:text="Meal3" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/index_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="16dp"
+            android:enabled="false"
+            app:srcCompat="@drawable/ic_baseline_directions_run_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/plan_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_baseline_local_dining_24"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/profile_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_baseline_bar_chart_24" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

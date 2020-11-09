@@ -1,0 +1,32 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="successToast">
+        <item name="colorBackground">@color/colorTheme</item>
+        <item name="textColor">@color/whiteBack</item>
+        <item name="iconLeft">@drawable/ic_toastexample_icon</item>
+        <item name="length">LONG</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="errorToast">
+        <item name="colorBackground">#E1270E</item>
+        <item name="textColor">@color/whiteBack</item>
+        <item name="iconLeft">@drawable/ic_toasterror_icon</item>
+        <item name="length">LONG</item>
+        <item name="cornerRadius">3dp</item>
+    </style>
+
+    <style name="AppTheme.FullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

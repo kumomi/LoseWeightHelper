@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whiteBack"
+    tools:context="au.edu.sydney.comp5216.LoseWeightHelper.apirelated.MakePlanActivity">
+
+    <TextView
+        android:id="@+id/yourGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/colorSecond"
+        android:text="Your Goal"
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/exerciseSelector"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lossSelector"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/generatePlan"
+        android:text="Generate Plan"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/whiteBack"
+        android:textSize="18dp"
+        android:background="@drawable/button_primary"
+        />
+
+    <LinearLayout
+        android:id="@+id/BmiLinearLayout"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/Bmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="left"
+            android:text="Your BMI"
+            android:textColor="@color/darkGray"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/healthStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="left"
+            android:text="Your Health Status"
+            android:textColor="@color/darkGray"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="left"
+            android:text="Your bmi range"
+            android:textColor="@color/darkGray"
+            />
+
+    </LinearLayout>
+</LinearLayout>
