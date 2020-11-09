@@ -90,6 +90,9 @@ public class MakePlanActivity extends AppCompatActivity {
         generatePlan();
     }
 
+    /**
+     * generate users workout and meal plan by communicating with API
+     */
     private void generatePlan() {
         if(firebaseUser != null) {
             String email = firebaseUser.getEmail();
@@ -136,6 +139,9 @@ public class MakePlanActivity extends AppCompatActivity {
                                 .addHeader("x-rapidapi-host", ApiKey.host)
                                 .build();
 
+                        /**
+                         * Start communicating API
+                         */
                         client.newCall(request).enqueue(new Callback() {
                             @Override
                             public void onFailure(Call call, IOException e) {
@@ -151,6 +157,9 @@ public class MakePlanActivity extends AppCompatActivity {
                                         public void run() {
                                             Log.d("result", myResponse);
 
+                                            /**
+                                             * Recode all the JSON format
+                                             */
                                             try{
                                                 JSONObject jsonObject = new JSONObject(myResponse);
                                                 Log.d("object", jsonObject.toString());

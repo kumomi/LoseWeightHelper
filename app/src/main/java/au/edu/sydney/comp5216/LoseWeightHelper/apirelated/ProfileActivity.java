@@ -123,6 +123,9 @@ public class ProfileActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Get API version and send JSON data to API.
+     */
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void checkUserStatus() {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();

@@ -39,7 +39,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Main API works class
+ * Main API works class For users detailed information
  */
 public class UserActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
@@ -87,6 +87,9 @@ public class UserActivity extends AppCompatActivity {
 
         }
 
+    /**
+     * genrate users detailed data through communicating the API
+     */
     private void generateData() {
 
         if(firebaseUser != null){
@@ -189,6 +192,9 @@ public class UserActivity extends AppCompatActivity {
                             }
                         });
 
+                        /**
+                         * The URL to interact with RapidAPI
+                         */
                         String BodyFactUrl = "https://rapidapi.p.rapidapi.com/bodyfat?waist="+waistValue + "&gender=" +genderValue + "&neck=50&height="
                                 + heightValue + "&hip=92&age=" + ageValue + "&weight=" + weightValue;
                         //"96&gender=male&neck=50&heigth=184&hip=92&age=25&weigth=70";
@@ -215,6 +221,9 @@ public class UserActivity extends AppCompatActivity {
                                         public void run() {
                                             Log.d("result", myResponse);
 
+                                            /**
+                                             * reformat JSON data
+                                             */
                                             try{
                                                 JSONObject jsonObject = new JSONObject(myResponse);
                                                 String BodyFactMass = jsonObject.getString("Body Fat Mass");

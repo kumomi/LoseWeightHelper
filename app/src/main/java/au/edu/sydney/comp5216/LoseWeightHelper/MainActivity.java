@@ -13,9 +13,9 @@ import au.edu.sydney.comp5216.LoseWeightHelper.profile.RegisterActivity;
 import au.edu.sydney.comp5216.LoseWeightHelper.profile.LoginActivity;
 
 /**
- * COMP5216 Group Project - LoseWeightHelper
+ * COMP5216 Group 14 Project - LoseWeightHelper
  * This is a start page with login and signup functions.
- *
+ * @author comp5216
  * @version 1.0
  */
 public class MainActivity extends AppCompatActivity {

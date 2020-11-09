@@ -27,6 +27,9 @@ import au.edu.sydney.comp5216.LoseWeightHelper.apirelated.UserActivity;
  * Allow users to input their body data, Then calculate the indexs through API
  */
 public class FillDataActivity extends AppCompatActivity {
+    /**
+     * Initialize firebase permission to access
+     */
     FirebaseAuth firebaseAuth;
 
     Spinner spinner;
@@ -38,6 +41,10 @@ public class FillDataActivity extends AppCompatActivity {
     Button submitData;
     Button jump;
 
+    /**
+     * Bind all layout elements id and set the view.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +73,10 @@ public class FillDataActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Get users detailed data and send to API.
+     * @param
+     */
     private void checkUserStatus() {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if(firebaseUser != null){

@@ -107,6 +107,11 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * The new user registered his new account
+     * @param email email address string
+     * @param password password string
+     */
     private void registerUser(String email, String password) {
         progressDialog.show();
 
@@ -128,7 +133,9 @@ public class RegisterActivity extends AppCompatActivity {
 
                                         String email = user.getEmail();
                                         String uid = user.getUid();
-
+                                        /**
+                                         * Hashmap to save all realted signup information
+                                         */
                                         HashMap<Object, String> hashMap = new HashMap<>();
                                         hashMap.put("email", email);
                                         hashMap.put("uid", uid);

@@ -44,6 +44,9 @@ import okhttp3.Response;
  */
 public class FoodAnalysisActivity extends AppCompatActivity {
 
+    /**
+     * Initialize all the buttons elemements
+     */
     Button refresh;
     Button searchFood;
     EditText foodInput;
@@ -57,6 +60,9 @@ public class FoodAnalysisActivity extends AppCompatActivity {
     ImageView foodAnalysisImage;
     TextView foodName;
 
+    /**
+     * store all related data here.
+     */
     ArrayList<BarEntry> nutritionData = new ArrayList<>();
 
     @Override
@@ -90,6 +96,10 @@ public class FoodAnalysisActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * generate detailed data by communicating with API
+     * need to send related data.
+     */
     private void generateData() {
         if(firebaseUser != null){
             String email = firebaseUser.getEmail();
@@ -153,6 +163,9 @@ public class FoodAnalysisActivity extends AppCompatActivity {
                                                 JSONObject nutritionJson = new JSONObject(foodDetailed.getString("nutrients"));
                                                 Log.d("nutrition", nutritionJson.toString());
 
+                                                /**
+                                                 * parse the String and add it into data bank.
+                                                 */
                                                 nutritionData.add(new BarEntry(Float.parseFloat(nutritionJson.getString("ENERC_KCAL")),0));
                                                 barChart.notifyDataSetChanged();
                                                 nutritionData.add(new BarEntry(Float.parseFloat(nutritionJson.getString("PROCNT")),1));

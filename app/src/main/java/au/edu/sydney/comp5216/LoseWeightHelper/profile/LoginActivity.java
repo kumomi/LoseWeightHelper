@@ -143,6 +143,10 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Override the navigation
+     * @return reset the view
+     */
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
